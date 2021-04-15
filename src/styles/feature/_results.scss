@@ -1,0 +1,43 @@
+.results {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &__temperatures {        
+        display: flex;
+    }
+
+    &__summary {    
+        width: 50%;    
+        padding: 20px;
+        margin: 0 auto 30px;
+        background: var(--white); 
+        box-shadow: 0 0 8px 0 rgba(0,0,0,0.15); 
+        color: #000080;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 30%;
+        padding: 20px;
+        margin: 0 50px 0 0;
+        background: var(--white); 
+        box-shadow: 0 0 8px 0 rgba(0,0,0,0.15); 
+
+        &:last-of-type {
+            margin: 0;
+        }
+
+        &--min {
+            color: #800080;
+        }
+
+        &--max {
+            color: #008000;
+        }
+
+        &--avg {
+            color: #800040;
+        }
+    }
+}
