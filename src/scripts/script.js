@@ -1,3 +1,4 @@
+// Temp Tracker class
 function TempTracker() {
     let temps = [],
         max = null,
@@ -60,6 +61,17 @@ function TempTracker() {
     this.getAvg = function() {    
       return avg;
     };
+
+    this.clearAll = function() {
+      temps = [];
+      max = null;
+      min = null;
+      avg = 0;
+      count = 0;
+      sum = 0;
+      
+      this.updateView();
+    }
 }
 
 function addTemps(temps) {
@@ -88,4 +100,9 @@ function addCustomTemperatures() {
 
   // clear input value
   input.value = '';
+}
+
+// clear all previously added temperatures
+function clearAll() {
+  tracker.clearAll();
 }
